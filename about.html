@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Rohish Shrees — a Grade 11 student passionate about AMV editing, web design, and creative visual storytelling." />
   <title>About • Rohish Shrees</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="ICONS/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="ICONS/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="ICONS/favicon-16x16.png">
-  <link rel="manifest" href="ICONS/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="ICONS/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="ICONS/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="ICONS/favicon-16x16.png" />
+  <link rel="manifest" href="ICONS/site.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body class="about-page">
-  <div style="padding: 2rem 5%; max-width: 1400px; margin: 0 auto;">
-    <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.7rem; color: #ffffff; text-decoration: none; font-weight: 600; transition: all 0.3s ease; margin-top: 1rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 999px; padding: 0.7rem 1.2rem;">← Back to home</a>
-  </div>
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="Home page">Rohish<span class="brand-dot">.</span></a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="proj.html">Projects</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <a class="nav-btn primary" href="contact.html">Hire Me</a>
+    </div>
+  </header>
 
   <main class="about-shell">
     <section class="about-hero reveal">
       <div class="glass-card">
         <div class="about-header">
-          <h1>
-            About <span class="gradient-text">Me</span>
-          </h1>
+          <h1>About <span class="gradient-text">Me</span></h1>
           <p class="tagline">Hey, I'm Rohish Shrees — turning anime into stories and code into clean experiences.</p>
         </div>
 
@@ -40,34 +50,36 @@
             <div class="skill-item">
               <span class="skill-icon">🎬</span>
               <h3>AMV Editing</h3>
-              <p>Cinematic cuts, effects, color grading, storytelling through anime</p>
+              <p>Cinematic cuts, effects, color grading, and storytelling through anime.</p>
             </div>
+
             <div class="skill-item">
               <span class="skill-icon">💻</span>
               <h3>Web Development</h3>
-              <p>HTML, CSS, responsive design, glassmorphism UI, clean layouts</p>
+              <p>HTML, CSS, responsive design, and clean interface development.</p>
             </div>
+
             <div class="skill-item">
               <span class="skill-icon">⚡</span>
               <h3>Currently Learning</h3>
-              <p>JavaScript basics • Better animations • Video compositing tricks</p>
+              <p>JavaScript basics, motion design, and better UI polish.</p>
             </div>
           </div>
 
           <p class="fun-fact">
-            Fun fact: My first AMV took 3 weeks of trial and error — now I can finish a solid edit in a weekend!
+            Fun fact: My first AMV took 3 weeks of trial and error — now I can finish a solid edit in a weekend.
           </p>
 
-          <div style="margin-top: 3rem; padding-top: 3rem; border-top: 1px solid rgba(120, 120, 255, 0.2);">
-            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #d0d0ff;">My Story</h2>
-            <p style="font-size: 1.1rem; color: #b0b0d0; line-height: 1.8; margin-bottom: 1.5rem;">
-              I'm Rohish Shrees, a 17-year-old student passionate about creating visual stories. My journey started with anime, but it quickly expanded into web design and creative development. Whether it's editing a powerful sequence or building a sleek interface, I enjoy turning ideas into experiences that feel polished and memorable.
+          <div class="story-block">
+            <h2>My Story</h2>
+            <p>
+              I'm Rohish Shrees, a 17-year-old student passionate about creating visual stories. My journey started with anime, but it quickly expanded into web design and creative development. Whether it's editing a powerful sequence or building a polished interface, I enjoy turning ideas into experiences that feel immersive and memorable.
             </p>
-            <p style="font-size: 1.1rem; color: #b0b0d0; line-height: 1.8; margin-bottom: 1.5rem;">
-              Whether it's crafting cinematic AMV edits or building clean, modern websites, I believe in combining aesthetics with functionality. Every project I work on is an opportunity to level up my craft and tell a stronger story.
+            <p>
+              Whether it's crafting cinematic AMV edits or building clean, modern websites, I believe in combining aesthetics with functionality. Every project I work on is an opportunity to grow and tell a stronger story.
             </p>
-            <p style="font-size: 1.1rem; color: #b0b0d0; line-height: 1.8;">
-              I'm always learning, experimenting, and looking for exciting collaborations. Let's create something amazing together!
+            <p>
+              I'm always learning, experimenting, and looking for exciting collaborations. Let's create something amazing together.
             </p>
           </div>
         </div>
@@ -78,23 +90,5 @@
       <span>© <span id="year"></span> Rohish Shrees • Made with passion &amp; late-night edits</span>
     </footer>
   </main>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    const revealItems = document.querySelectorAll('.reveal');
-    if (revealItems.length) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-
-      revealItems.forEach((item) => observer.observe(item));
-    }
-  </script>
 </body>
 </html>

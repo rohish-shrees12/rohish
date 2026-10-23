@@ -3,268 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>• Rohish Shrees</title>
-  <style>
-    /* Page-specific styles – you can move to styles.css later */
-    .projects-page {
-      background: linear-gradient(135deg, #0a0a14 0%, #171726 100%);
-      color: #e0e0ff;
-      min-height: 100vh;
-    }
-
-    .projects-hero {
-      text-align: center;
-      padding: 16vh 5% 8vh;
-    }
-
-    .projects-hero h1 {
-      font-size: clamp(3rem, 9vw, 5.5rem);
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-
-    .projects-hero .gradient-text {
-      background: linear-gradient(90deg, #c084fc, #a78bfa, #60a5fa);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .projects-hero p {
-      font-size: 1.3rem;
-      color: #b0b0d0;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 2.5rem;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 5% 10vh;
-    }
-
-    .project-card {
-      background: rgba(30, 30, 60, 0.4);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(168, 85, 247, 0.18);
-      border-radius: 1.4rem;
-      overflow: hidden;
-      transition: all 0.4s ease;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
-    }
-
-    .project-card:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 24px 60px rgba(168, 85, 247, 0.3);
-      border-color: rgba(168, 85, 247, 0.4);
-    }
-
-    .project-thumbnail {
-      height: 220px;
-      background: #1a1a2e;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      color: #a0a0c0;
-      border-bottom: 1px solid rgba(168, 85, 247, 0.15);
-    }
-
-    .project-info {
-      padding: 1.8rem;
-    }
-
-    .project-title {
-      font-size: 1.6rem;
-      margin-bottom: 0.8rem;
-      color: #c084fc;
-    }
-
-    .project-desc {
-      font-size: 1.05rem;
-      color: #b0b0d0;
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-
-    .tag {
-      background: rgba(168, 85, 247, 0.2);
-      color: #c084fc;
-      padding: 0.4rem 1rem;
-      border-radius: 50px;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .coming-soon {
-      text-align: center;
-      padding: 4rem 2rem;
-      color: #707090;
-      font-size: 1.4rem;
-      font-style: italic;
-    }
-  </style>
-  <link rel="apple-touch-icon" sizes="180x180" href="ICONS/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="ICONS/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="ICONS/favicon-16x16.png">
-<link rel="manifest" href="ICONS/site.webmanifest">
+  <meta name="description" content="Portfolio projects by Rohish Shrees featuring AMV edits and creative web work." />
+  <title>Projects • Rohish Shrees</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="ICONS/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="ICONS/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="ICONS/favicon-16x16.png" />
+  <link rel="manifest" href="ICONS/site.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body class="projects-page">
-
-  <!-- Reuse your topbar from home – copy it here or make a shared header later -->
   <header class="topbar" id="top">
     <div class="topbar-inner">
-      <div style="display: flex; align-items: center; gap: 2rem;">
-        <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.7rem; color: #ffffff; text-decoration: none; font-weight: 600; transition: all 0.3s ease; background: linear-gradient(90deg, #a855f7, #c084fc); padding: 0.7rem 1.5rem; border-radius: 50px; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(168, 85, 247, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(168, 85, 247, 0.3)';">← Rohish.</a>
-      </div>
+      <a class="brand" href="index.html" aria-label="Home page">Rohish<span class="brand-dot">.</span></a>
 
       <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="proj.html">Projects</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </nav>
 
-      <div class="topbar-actions">
-      </div>
+      <a class="nav-btn primary" href="contact.html">Hire Me</a>
     </div>
   </header>
 
-  <main>
+  <main class="projects-main">
     <section class="projects-hero reveal">
       <h1>My <span class="gradient-text">Projects</span></h1>
-      <p>AMVs that hit different + web creations I'm proud of. More coming soon!</p>
+      <p>AMVs that hit different + web creations I'm proud of. More coming soon.</p>
     </section>
 
     <div class="projects-grid">
-      <!-- Project 1 -->
-      <div class="project-card">
-        <div class="project-thumbnail" style="height: 220px; position: relative; overflow: hidden;">
-          
-          <video width="100%" height="100%" controls style="object-fit: cover;" poster="edits for web/chainsaw (1).jpg">
-            
-            <source src="edits for web/chainsaw.mp4" type="video/mp4">
-            Your browser doesn't support video
+      <article class="project-card reveal">
+        <div class="project-thumbnail">
+          <video controls poster="edits for web/chainsaw (1).jpg" aria-label="Chainsaw Man project video">
+            <source src="edits for web/chainsaw.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
           </video>
-          <div style="position: absolute; top: 10px; right: 10px; background: rgba(255, 255, 255, 0.2); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.8rem; backdrop-filter: blur(10px);">Featured</div>
         </div>
         <div class="project-info">
           <h3 class="project-title">Chainsaw Man – Demon Hunter</h3>
-          <p style="color: #a0a0c0; font-size: 0.95rem; margin-bottom: 1.2rem;">Intense action-packed AMV with vibe edit & professional editing</p>
-          <a href="contact.html" style="display: inline-block; margin-top: 1rem; color: white; text-decoration: none; font-weight: 600; background: linear-gradient(90deg, #a855f7, #c084fc); padding: 0.7rem 1.5rem; border-radius: 50px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(168, 85, 247, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">Contact for Details →</a>
+          <p>Intense action-packed AMV with vibe edit and professional visual pacing.</p>
+          <a href="contact.html" class="project-link">Book a Project</a>
         </div>
-      </div>
+      </article>
 
-      <!-- Project 2 -->
-      <div class="project-card">
-        <div class="project-thumbnail" style="height: 220px; position: relative; overflow: hidden;">
-     <video width="100%" height="100%" controls style="object-fit: cover;" poster="edits for web/demon-slayer1.jpg">
-            <source src="edits for web/demon-slayer.mp4"
-                     type="video/mp4">
-            Your browser doesn't support video
+      <article class="project-card reveal">
+        <div class="project-thumbnail">
+          <video controls poster="edits for web/demon-slayer1.jpg" aria-label="Demon Slayer project video">
+            <source src="edits for web/demon-slayer.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
           </video>
         </div>
         <div class="project-info">
           <h3 class="project-title">Demon Slayer – Blade Edit</h3>
-          <p style="color: #a0a0c0; font-size: 0.95rem; margin-bottom: 1.2rem;">Action-packed AMV with stunning effects</p>
-          <a href="contact.html" style="display: inline-block; margin-top: 1rem; color: white; text-decoration: none; font-weight: 600; background: linear-gradient(90deg, #a855f7, #c084fc); padding: 0.7rem 1.5rem; border-radius: 50px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(168, 85, 247, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">Contact for Details →</a>
+          <p>Action-packed AMV with dramatic transitions and punchy energy.</p>
+          <a href="contact.html" class="project-link">Book a Project</a>
         </div>
-      </div>
+      </article>
 
-      <!-- Project 3 -->
-      <div class="project-card">
-        <div class="project-thumbnail" style="height: 220px; position: relative; overflow: hidden;" >
-          <video width="100%" height="100%" controls style="object-fit: cover;">
-            <source src="edits for web/jujutsu-kaisen.mp4" type="video/mp4">
-            Your browser doesn't support video
+      <article class="project-card reveal">
+        <div class="project-thumbnail">
+          <video controls aria-label="Jujutsu Kaisen project video">
+            <source src="edits for web/jujutsu-kaisen.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
           </video>
         </div>
         <div class="project-info">
           <h3 class="project-title">Jujutsu Kaisen – Quick Edit</h3>
-          <p style="color: #a0a0c0; font-size: 0.95rem; margin-bottom: 1.2rem;">Fast-paced battle sequences with quick edit</p>
-          <a href="contact.html" style="display: inline-block; margin-top: 1rem; color: white; text-decoration: none; font-weight: 600; background: linear-gradient(90deg, #a855f7, #c084fc); padding: 0.7rem 1.5rem; border-radius: 50px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(168, 85, 247, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">Contact for Details →</a>
+          <p>Fast-paced battle sequences with sharp cuts and energetic rhythm.</p>
+          <a href="contact.html" class="project-link">Book a Project</a>
         </div>
-      </div>
+      </article>
 
-      <!-- Project 4 -->
-      <div class="project-card">
-        <div class="project-thumbnail" style="height: 220px; position: relative; overflow: hidden;">
-          <video width="100%" height="100%" controls style="object-fit: cover;"poster="edits for web/Vibe2.jpg">
-            <source src="edits for web/Vibe.mp4" type="video/mp4">
-            Your browser doesn't support video
+      <article class="project-card reveal">
+        <div class="project-thumbnail">
+          <video controls poster="edits for web/Vibe2.jpg" aria-label="AMV normal edit project video">
+            <source src="edits for web/Vibe.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
           </video>
         </div>
         <div class="project-info">
-          <h3 class="project-title">AMV– Normal Edit</h3>
-          <p style="color: #a0a0c0; font-size: 0.95rem; margin-bottom: 1.2rem;">Classic storytelling with smooth normal edit flow</p>
-          <a href="contact.html" style="display: inline-block; margin-top: 1rem; color: white; text-decoration: none; font-weight: 600; background: linear-gradient(90deg, #a855f7, #c084fc); padding: 0.7rem 1.5rem; border-radius: 50px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(168, 85, 247, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">Contact for Details →</a>
+          <h3 class="project-title">AMV – Normal Edit</h3>
+          <p>Classic storytelling with smooth pacing and visual flow.</p>
+          <a href="contact.html" class="project-link">Book a Project</a>
         </div>
-      </div>
+      </article>
 
-      <!-- Project 6 - Coming Soon -->
-      <div class="project-card">
-        <div class="project-thumbnail" style="height: 220px; position: relative; overflow: hidden; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
-          <div style="text-align: center; z-index: 10;">
-            <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">🚀</div>
-            <div style="font-size: 1rem; font-weight: 600; color: rgba(255,255,255,0.8);">Coming Soon</div>
+      <article class="project-card reveal coming-soon-card">
+        <div class="project-thumbnail project-thumb-soon">
+          <div class="soon-content">
+            <div class="soon-icon">🚀</div>
+            <div class="soon-label">Coming Soon</div>
           </div>
         </div>
         <div class="project-info">
           <h3 class="project-title">Next Epic Project</h3>
-          <p style="color: #a0a0c0; font-size: 0.95rem; margin-bottom: 1.2rem;">New amazing project in progress</p>
-          <a href="contact.html" style="display: inline-block; margin-top: 1rem; color: white; text-decoration: none; font-weight: 600; background: linear-gradient(90deg, #a855f7, #c084fc); padding: 0.7rem 1.5rem; border-radius: 50px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(168, 85, 247, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">Contact for Details →</a>
+          <p>Something new and exciting is already in progress.</p>
+          <a href="contact.html" class="project-link">Book a Project</a>
         </div>
-      </div>
+      </article>
     </div>
   </main>
 
   <footer class="home-footer">
     <span>© <span id="year"></span> Rohish Shrees • Always creating</span>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Optional: simple reveal on scroll (copy from your home if you want)
-    const reveals = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-        }
-      });
-    }, { threshold: 0.1 });
-
-    reveals.forEach(el => observer.observe(el));
-  </script>
-
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
