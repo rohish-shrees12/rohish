@@ -3,20 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact • Rohish Shrees</title>
-<link rel="stylesheet" href="style.css">
-
-  
- <link rel="apple-touch-icon" sizes="180x180" href="ICONS/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="ICONS/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="ICONS/favicon-16x16.png">
-<link rel="manifest" href="ICONS/site.webmanifest">
-
-
+  <title>About • Rohish Shrees</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="ICONS/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="ICONS/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="ICONS/favicon-16x16.png">
+  <link rel="manifest" href="ICONS/site.webmanifest">
 </head>
 <body class="about-page">
   <div style="padding: 2rem 5%; max-width: 1400px; margin: 0 auto;">
-    <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.7rem; color: #ffffff; text-decoration: none; font-weight: 600; transition: all 0.3s ease; margin-top: 1rem; background: linear-gradient(90deg, #a855f7, #c084fc); padding: 0.7rem 1.5rem; border-radius: 50px; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(168, 85, 247, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(168, 85, 247, 0.3)';">← Rohish.</a>
+    <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.7rem; color: #ffffff; text-decoration: none; font-weight: 600; transition: all 0.3s ease; margin-top: 1rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 999px; padding: 0.7rem 1.2rem;">← Back to home</a>
   </div>
 
   <main class="about-shell">
@@ -33,9 +29,9 @@
           <div class="intro">
             <p class="greeting">I'm a <span class="highlight">Grade 11</span> student at</p>
             <h2 class="college">Xavier International College</h2>
-            
+
             <p class="bio">
-              Passionate about <strong>cinematic AMV editing</strong> and building modern, responsive web pages with HTML & CSS.  
+              Passionate about <strong>cinematic AMV editing</strong> and building modern, responsive web pages with HTML &amp; CSS.
               I love blending creativity with code — whether it's syncing cuts to a beat or crafting pixel-perfect designs.
             </p>
           </div>
@@ -65,10 +61,10 @@
           <div style="margin-top: 3rem; padding-top: 3rem; border-top: 1px solid rgba(120, 120, 255, 0.2);">
             <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #d0d0ff;">My Story</h2>
             <p style="font-size: 1.1rem; color: #b0b0d0; line-height: 1.8; margin-bottom: 1.5rem;">
-              I'm Rohish Shrees, a 17-year-old student passionate about creating visual stories. My journey started with anime, but it quickly expanded into web design and creative development. What began as a hobby editing anime videos turned into a genuine passion for visual storytelling.
+              I'm Rohish Shrees, a 17-year-old student passionate about creating visual stories. My journey started with anime, but it quickly expanded into web design and creative development. Whether it's editing a powerful sequence or building a sleek interface, I enjoy turning ideas into experiences that feel polished and memorable.
             </p>
             <p style="font-size: 1.1rem; color: #b0b0d0; line-height: 1.8; margin-bottom: 1.5rem;">
-              Whether it's crafting cinematic AMV edits or building clean, modern websites, I believe in combining aesthetics with functionality. Every project I work on is an opportunity to level up and push creative boundaries. I'm dedicated to both editing and coding, constantly learning new techniques and exploring innovative ways to bring ideas to life.
+              Whether it's crafting cinematic AMV edits or building clean, modern websites, I believe in combining aesthetics with functionality. Every project I work on is an opportunity to level up my craft and tell a stronger story.
             </p>
             <p style="font-size: 1.1rem; color: #b0b0d0; line-height: 1.8;">
               I'm always learning, experimenting, and looking for exciting collaborations. Let's create something amazing together!
@@ -79,11 +75,26 @@
     </section>
 
     <footer class="about-footer">
-      <span>© <span id="year"></span> Rohish Shrees • Made with passion & late-night edits</span>
+      <span>© <span id="year"></span> Rohish Shrees • Made with passion &amp; late-night edits</span>
     </footer>
   </main>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const revealItems = document.querySelectorAll('.reveal');
+    if (revealItems.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealItems.forEach((item) => observer.observe(item));
+    }
   </script>
 </body>
+</html>
